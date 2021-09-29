@@ -2,9 +2,10 @@ import { Router } from "express";
 import db from "../db/server.js";
 
 const router = new Router();
+
 router.get("/notes", async (req, res) => {
   const notes = await db.index();
-  return res.status(200).json(notes);
+  res.status(200).json(notes);
 });
 
 router.post("/notes", ({ body }, res) => {
