@@ -12,8 +12,7 @@ router.post("/notes", ({ body }, res) => {
   res.status(201).send("Note Created.");
 });
 
-router.delete("/notes/:id", (req, res) => {
-  db.remove(req.params.id).then(() => res.json({ okay: true }));
-});
+// router.delete("/notes/:id", (req, res) => {
+//   db.remove(req.params.id)
 
 export default router;
