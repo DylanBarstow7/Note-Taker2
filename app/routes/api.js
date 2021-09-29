@@ -9,7 +9,7 @@ router.get("/notes", async (req, res) => {
 
 router.post("/notes", ({ body }, res) => {
   db.create(body);
-  res.status(201).send("Note Added!");
+  res.status(201).send("Note Created.");
 });
 
 router.delete("/notes/:id", (req, res) => {
