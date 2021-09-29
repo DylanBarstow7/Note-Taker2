@@ -7,4 +7,7 @@ router.get("/notes", async (req, res) => {
   return res.status(200).json(notes);
 });
 
-
+router.post("/notes", ({ body }, res) => {
+  db.create(body);
+  res.status(201).send("Note Added!");
+});
