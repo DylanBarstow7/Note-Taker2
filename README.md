@@ -9,11 +9,11 @@
 
 ## Description
 
-A note taking app that uses an espress.js back-end and JSON to write and save notes.
+A note taking app that uses an espress.js back-end and JSON to write, save, and delete notes.
 
 Live Deployment: <https://shielded-lake-82703.herokuapp.com/notes.html>
 
-![alt text]()
+![alt text](https://github.com/DylanBarstow7/Note-Taker2/blob/main/app/img/Note-Taker-Heroku-deployment.PNG)
 
 ## Installation
 
@@ -23,7 +23,9 @@ npm i, npm start
 
 ## Usage
 
-Open your browser to local host route 3001
+If you're following the installation instructions open your browser to localhost:3001   else   click the link to the live deployment on heroku.
+
+Once on the site you may enter a note title and note text.  Then click the save button in the top right.  Your new comment will appear under the test title.  
 
 ## Contact
 
