@@ -11,6 +11,8 @@
 
 A note taking app that uses an espress.js back-end and JSON to write and save notes.
 
+Live Deployment: <https://shielded-lake-82703.herokuapp.com/notes.html>
+
 ![alt text]()
 
 ## Installation
@@ -27,4 +29,4 @@ Open your browser to local host route 3001
 
 For enquiries contact me at dcbarstow7@gmail.com
 
-To see other projects, please visit https://github.com/DylanBarstow7/
+To see other projects, please visit <https://github.com/DylanBarstow7/>
