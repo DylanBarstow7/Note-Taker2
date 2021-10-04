@@ -1,11 +1,16 @@
 import { Router } from "express";
+import fs from "fs";
 import db from "../db/server.js";
 
 const router = new Router();
 
-router.get("/notes", async (req, res) => {
-  const notes = await db.index();
-  res.status(200).json(notes);
+console.log(db);
+
+router.get("/notes", (req, res) => {
+  fs.readFile("./app/db/db.json", "utf-8", (err, data) => {
+    if (err) throw err;
+    return res.json(JSON.parse(data));
+  });
 });
 
 router.post("/notes", ({ body }, res) => {
