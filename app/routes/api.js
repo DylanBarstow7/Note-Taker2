@@ -1,11 +1,8 @@
 import { Router } from "express";
 import fs from "fs";
 import { nanoid } from "nanoid";
-import db from "../db/server.js";
-
 const router = new Router();
-
-console.log(db);
+const realPath = null;
 
 router.get("/notes", (req, res) => {
   fs.readFile("./app/db/db.json", "utf-8", (err, data) => {
@@ -32,7 +29,19 @@ router.post("/notes", (req, res) => {
   });
 });
 
-// router.delete("/notes/:id", (req, res) => {
-//   db.remove(req.params.id)
+router.delete("/notes/:id", (req, res) => {
+  fs.readFile("./app/db/db.json", "utf-8", (err, data) => {
+    if (err) throw err;
+    const allNotes = JSON.parse(data);
+    const deleteNote = req.params.id;
+
+    const result = allNotes.filter((note) => note.id !== deleteNote);
+
+    fs.writeFile("./app/db/db.json", JSON.stringify(result), (err) => {
+      if (err) res.json({ err: "error deleting" });
+      res.json(result);
+    });
+  });
+});
 
 export default router;
