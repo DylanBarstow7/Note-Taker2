@@ -2,7 +2,6 @@ import { Router } from "express";
 import fs from "fs";
 import { nanoid } from "nanoid";
 const router = new Router();
-const realPath = null;
 
 router.get("/notes", (req, res) => {
   fs.readFile("./app/db/db.json", "utf-8", (err, data) => {
