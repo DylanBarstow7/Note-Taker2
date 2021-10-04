@@ -7,11 +7,11 @@ export default {
     return JSON.parse(await fs.readFile(`${realPath}/app/db/db.json`, "utf8"));
   },
 
-  async create(newEntry) {
+  async create(newNote) {
     const currentEntry = await this.index();
     fs.writeFile(
       `${realPath}/app/db/db.json`,
-      JSON.stringify([...currentEntry, newEntry])
+      JSON.stringify([...currentEntry, newNote])
     );
   },
 };
