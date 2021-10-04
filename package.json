@@ -21,6 +21,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "inquirer": "^8.1.2",
-    "nanoid": "^3.1.23"
+    "nanoid": "^3.1.28"
   }
 }
